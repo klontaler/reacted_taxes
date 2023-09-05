@@ -45,7 +45,7 @@ export default function Calculator() {
       <main>
         <div className={styles.block}>
           <h1 id={styles.h1} className={styles.h1}>Это будет clarification block, но его пока нет...</h1>
-          <h2 className={styles.h2}>Скорее всего, я напишу его для того, чтобы уточнить по поводу налогов с покупок и тд</h2>
+          <h2 className={styles.h2} style={{marginBottom: '18px'}}>Скорее всего, я напишу его для того, чтобы уточнить по поводу налогов с покупок и тд</h2>
           <button className="nextButton" onClick={() => [setBlockNum(3), calculate()]}>Далее</button>
         </div>
       </main>
