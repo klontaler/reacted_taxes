@@ -15,17 +15,26 @@ export default function Calculator() {
 
   );
   const [blockNum, setBlockNum] = useState(1);
+  
+  const calculatedExpenses = {
+    whole: 0,
+    ndfl: 0,
+    funds:0,
+  }
 
   function handleSalary(e) {
-    setSalary(e.target.value / 77 * 100);
+    setSalary(e.target.value - 0);
   }
 
   function calculate() {
-    const calculatedExpenses = {
-      whole: Math.round(salary * 1.3),
-      ndfl: Math.round(salary * 0.13),
-      funds: Math.round(salary * 0.30),
+    if (salary / 75 * 1200 > 5000000) {
+      calculatedExpenses.ndfl = Math.round(salary / 85 * 15);
+    } else {
+      calculatedExpenses.ndfl = Math.round(salary / 87 * 13)
     }
+
+    calculatedExpenses.funds = Math.round(salary * 0.304)
+    calculatedExpenses.whole = Math.round(salary + calculatedExpenses.ndfl + calculatedExpenses.funds);
     setExpenses(calculatedExpenses);
   }
 

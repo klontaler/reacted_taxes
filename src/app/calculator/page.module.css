@@ -58,6 +58,7 @@
     margin: 12px auto;
   }
 }
+
 @media (max-height: 880px) {
   #resultBlock {
     margin-top: 120px;
