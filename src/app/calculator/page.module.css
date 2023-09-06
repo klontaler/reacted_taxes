@@ -62,6 +62,7 @@
 @media (max-height: 880px) {
   #resultBlock {
     margin-top: 120px;
+    margin-bottom: 120px;
   }
 }
 /* Tablet and Smaller Desktop */
