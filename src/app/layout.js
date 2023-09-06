@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
           <Link className='headerLink' href='./'>Home</Link>
           <Link className='headerLink' href='./calculator'>Calculator</Link>
           <Link  className='headerLink' href='./info'>Info</Link>
+          <Link  className='headerLink' href='./about'>About</Link>
         </header>
 
         {children}
