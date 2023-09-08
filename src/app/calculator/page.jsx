@@ -6,6 +6,7 @@ import styles from './page.module.css'
 import Button from '@/components/UI/button/Button';
 import Input from '@/components/UI/input/Input';
 import Block from '@/components/UI/block/Block';
+import YellowBlock from '@/components/UI/yellowBlock/YellowBlock';
 
 export default function Calculator() {
   const [salary, setSalary] = useState();
@@ -44,8 +45,10 @@ export default function Calculator() {
   if (blockNum == 1) {
     return(
       <main>
-        <Block>
-          <div className={styles.yellowBlock}><h1 className={styles.h1}>Какая у вас заработная плата до вычета налогов?</h1></div>
+        <Block height400={true}>
+          <YellowBlock>
+            <h1 className={styles.h1}>Какая у вас заработная плата до вычета налогов?</h1>
+          </YellowBlock>
           <h2 className={styles.h2}>Введите свою заработную плату, получаемую на руки:</h2>
           <Input Inputmode="numeric" type="text" placeholder="В рублях" onChange={handleSalary} style={{margin: '16px auto 16px',}}/>
           <Button option="next" onClick={() => setBlockNum(2)} disabled={salary/salary != 1 || salary <= 0}>Далее</Button>
@@ -55,8 +58,10 @@ export default function Calculator() {
   } else if (blockNum == 2) {
     return (
       <main>
-        <Block>
-          <h1 id={styles.h1} className={styles.h1}>Это будет clarification block, но его пока нет...</h1>
+        <Block height400={true}>
+          <YellowBlock>
+            <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет clarification block, но его пока нет...</h1></div>
+          </YellowBlock>
           <h2 className={styles.h2} style={{marginBottom: '18px'}}>Скорее всего, я напишу его для того, чтобы уточнить по поводу налогов с покупок и тд</h2>
           <Button option="next" onClick={() => [setBlockNum(3), calculate()]}>Далее</Button>
         </Block>
@@ -65,8 +70,10 @@ export default function Calculator() {
   } else if (blockNum == 3) {
     return (
       <main>
-        <Block option='result'>
-          <h1 id={styles.h1} className={styles.h1}>Это будет result block, но его пока тоже нет...</h1>
+        <Block option='result' height400={true}>
+          <YellowBlock>
+            <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет result block, но его пока тоже нет...</h1></div>
+          </YellowBlock>
           <h2 className={styles.h2}>Для чего он существует вполне ясно и понятно</h2>
           <h2 className={styles.h2}>Всего работодатель тратит на вас: {expenses.whole}</h2>
           <h2 className={styles.h2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>

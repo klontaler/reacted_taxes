@@ -1,6 +1,6 @@
 .block {
   width: 45%;
-  height: 400px;
+  height: auto;
   background-color: white;
   border-radius: 30px;
   display: flex;
@@ -9,11 +9,23 @@
   overflow: hidden;
 }
 
+.height400 {
+  height: 400px;
+}
+
+.margin {
+  margin: 80px auto;
+}
+
 @media (max-width: 700px) {
   .block {
     width: 90%;
+  }
+
+  .height400 {
     height: auto;
   }
+
   .resultBlock {
     margin-top: 40px;
   }
