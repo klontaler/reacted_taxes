@@ -1,0 +1,35 @@
+.button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgba(148, 255, 255, 0.74);
+  margin: 24px auto;
+  font-weight: 700;
+  z-index: 1000;
+}
+
+.nextButton {
+  width: 80px;
+  margin:  0 auto auto;
+}
+
+.prevButton {
+  margin: 0;
+  position: absolute;
+  right: 36px;
+  top: 12px;
+}
+.marginButton {
+  margin: 24px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .nextButton {
+    margin:  0 auto 36px;
+  }
+  .prevButton {
+    position: absolute;
+    top: 60px;
+  }
+}

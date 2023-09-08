@@ -47,20 +47,6 @@ main {
   height: auto;
 }
 
-header {
-  position: absolute;
-  padding: 16px 0 12px;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.headerLink {
-  margin: auto 12px;
-  font-weight: 700;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -70,54 +56,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.button, button {
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  background-color: rgba(148, 255, 255, 0.74);
-  margin: 24px auto;
-  font-weight: 700;
-  z-index: 1000;
-}
-
-.nextButton {
-  width: 80px;
-  margin:  0 auto auto;
-}
-
-.prevButton {
-  margin: 0;
-  position: absolute;
-  right: 36px;
-  top: 12px;
-}
-
-.input, input {
-  margin: 0 auto 16px;
-  border: none;
-  background-color: rgba(148, 255, 255, 0.74);
-  height: 35px;
-  width: 320px;
-  border-radius: 9px;
-  padding: 9px;
-  text-align: center;
-}
-
-
 @media (prefers-color-scheme: dark) {
 
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .nextButton {
-    margin:  0 auto 36px;
-  }
-  .prevButton {
-    position: absolute;
-    top: 60px;
-  }
-  
+
 }
 
 /* Tablet and Smaller Desktop */

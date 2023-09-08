@@ -1,12 +1,7 @@
-.textWrapper {
-  max-width: 56%;
-}
 
 /* Mobile */
 @media (max-width: 700px) {
-  .textWrapper {
-    max-width: 94%;
-  }  
+
 }
 
 @media (max-height: 880px) {

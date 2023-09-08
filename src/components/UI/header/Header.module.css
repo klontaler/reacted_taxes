@@ -1,0 +1,13 @@
+.header {
+  position: absolute;
+  padding: 16px 0 12px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerLink {
+  margin: auto 12px;
+  font-weight: 700;
+}

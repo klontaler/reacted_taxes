@@ -1,0 +1,10 @@
+.textWrapper {
+  max-width: 48%;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .textWrapper {
+    max-width: 94%;
+  }  
+}
