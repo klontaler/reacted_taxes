@@ -65,7 +65,7 @@ export default function Calculator() {
   } else if (blockNum == 3) {
     return (
       <main>
-        <Block id="resultBlock">
+        <Block option='result'>
           <h1 id={styles.h1} className={styles.h1}>Это будет result block, но его пока тоже нет...</h1>
           <h2 className={styles.h2}>Для чего он существует вполне ясно и понятно</h2>
           <h2 className={styles.h2}>Всего работодатель тратит на вас: {expenses.whole}</h2>

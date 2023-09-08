@@ -23,9 +23,6 @@
   .yellowBlock {
     height: 240px;
   }
-  #resultBlock {
-    margin-top: 40px;
-  }
   #h1 {
     margin-top: 32px;
     margin-bottom: 12px;
@@ -40,12 +37,6 @@
   }
 }
 
-@media (max-height: 880px) {
-  #resultBlock {
-    margin-top: 120px;
-    margin-bottom: 60px;
-  }
-}
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
 
