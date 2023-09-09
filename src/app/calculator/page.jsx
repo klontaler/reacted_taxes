@@ -1,15 +1,18 @@
 'use client';
 
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 
 import styles from './page.module.css'
 import Button from '@/components/UI/button/Button';
 import Input from '@/components/UI/input/Input';
 import Block from '@/components/UI/block/Block';
 import YellowBlock from '@/components/UI/yellowBlock/YellowBlock';
+import { SalaryContext } from '@/context/SalaryContext';
+import Link from 'next/link';
 
 export default function Calculator() {
-  const [salary, setSalary] = useState();
+  const {salary, setSalary} = useContext(SalaryContext);
+
   const [expenses, setExpenses] = useState(
     {
       whole: 0,
@@ -79,7 +82,7 @@ export default function Calculator() {
           <h2 className={styles.h2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>
           <h2 className={styles.h2}>И взносы в различные фонды, в т.ч. и пенсионный: {expenses.funds}</h2>
           <h2 className={styles.h2} id={styles.resultMarginFix}>Для чего он существует вполне ясно и понятно</h2>
-          <Button option='prev' onClick={() => setBlockNum(1)}>В начало</Button>
+          <Button option='prev' onClick={() => [setBlockNum(1), setSalary('')]}>В начало</Button>
         </Block>
       </main>
     )
