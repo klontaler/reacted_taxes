@@ -10,7 +10,7 @@ export default function TextCard({children, title, nextFunc, prevFunc, nextDisab
     return (
       <Block {...props} margins={true}>
         <YellowBlock>
-          <h1 style={{width: '86%'}}>{title}</h1>
+          <h1>{title}</h1>
         </YellowBlock>
         {children}
         <div className={styles.buttonWrapper}>
@@ -23,7 +23,7 @@ export default function TextCard({children, title, nextFunc, prevFunc, nextDisab
     return (
       <Block {...props} margins={true}>
         <YellowBlock>
-          <h1 style={{width: '86%'}}>{title}</h1>
+          <h1>{title}</h1>
         </YellowBlock>
         {children}
       </Block>
