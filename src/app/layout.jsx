@@ -1,12 +1,16 @@
 'use client';
 
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import Header from '@/components/UI/header/Header'
 import { SalaryContext } from '@/context/SalaryContext'
 import { useState } from 'react'
 
-const inter = Inter({ subsets: ['cyrillic'] })
+const jetbrains_mono = JetBrains_Mono({
+  weight: ['400', '700'], 
+  subsets: ['cyrillic-ext'],
+  variable: '--font-jetbrains_mono',
+})
 
 export const metadata = {
   title: 'Плотина...логи',
@@ -18,7 +22,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="ru">
-      <body className={inter.className}>
+      <body className={jetbrains_mono.className}>
         <SalaryContext.Provider value={{
           salary,
           setSalary
