@@ -1,17 +1,15 @@
 'use client';
 
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 
 import styles from './page.module.css'
 import Button from '@/components/UI/button/Button';
 import Input from '@/components/UI/input/Input';
 import Block from '@/components/UI/block/Block';
 import YellowBlock from '@/components/UI/yellowBlock/YellowBlock';
-import { SalaryContext } from '@/context/SalaryContext';
-import Link from 'next/link';
 
 export default function Calculator() {
-  const {salary, setSalary} = useContext(SalaryContext);
+  const [salary, setSalary] = useState();
 
   const [expenses, setExpenses] = useState(
     {
