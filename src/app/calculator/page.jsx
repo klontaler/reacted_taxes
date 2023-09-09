@@ -73,19 +73,19 @@ export default function Calculator() {
   } else if (blockNum == 3) {
     return (
       <main>
-        <Block option='result' height400={true}>
+        <Block option='result'>
           <YellowBlock>
             <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет result block, но его пока тоже нет...</h1></div>
           </YellowBlock>
-          <h2 className={styles.h2}>Для чего он существует вполне ясно и понятно</h2>
-          <h2 className={styles.h2}>Всего работодатель тратит на вас: {expenses.whole}</h2>
-          <h2 className={styles.h2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>
-          <h2 className={styles.h2}>И взносы в различные фонды, в т.ч. и пенсионный: {expenses.funds}</h2>
-          <h2 className={styles.h2} id={styles.resultMarginFix}>Для чего он существует вполне ясно и понятно</h2>
+          <h2 className={styles.marginH2}>Для чего он существует вполне ясно и понятно</h2>
+          <h2 className={styles.marginH2}>Всего работодатель тратит на вас: {expenses.whole}</h2>
+          <h2 className={styles.marginH2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>
+          <h2 className={styles.marginH2}>И взносы в различные фонды, в т.ч. и пенсионный: {expenses.funds}</h2>
+          <h2 className={styles.marginH2} id={styles.resultMarginFix}>Для чего он существует вполне ясно и понятно</h2>
           <Button option='prev' onClick={() => [setBlockNum(1), setSalary('')]}>В начало</Button>
         </Block>
       </main>
     )
-  }
+  } 
 
 }
