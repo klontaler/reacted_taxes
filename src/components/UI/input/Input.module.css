@@ -8,3 +8,13 @@
   padding: 9px;
   text-align: center;
 }
+
+@media (prefers-color-scheme: dark) {
+  .input {
+    background-color: rgb(66, 50, 99);
+    color: rgb(230, 230, 230);
+  }
+  .input::placeholder {
+    color: rgb(180, 180, 180);
+  }
+}

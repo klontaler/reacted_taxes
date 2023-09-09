@@ -1,7 +1,7 @@
 .block {
   width: 45%;
   height: auto;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 30px;
   display: flex;
   flex-direction: column;
@@ -17,6 +17,11 @@
   margin: 80px auto;
 }
 
+@media (prefers-color-scheme: dark) {
+  .block {
+    background-color: rgb(27, 27, 27);
+  }
+}
 @media (max-width: 700px) {
   .block {
     width: 90%;

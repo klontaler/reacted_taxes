@@ -3,12 +3,16 @@
   --border-radius: 12px;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 188,227,255;
-  --background-end-rgb: 248,222,255;
+  --background-start-rgb: 248,222,255;
+  --background-end-rgb: 188,227,255;
 }
 
 @media (prefers-color-scheme: dark) {
-
+  :root {
+    --foreground-rgb: 215, 215, 215;
+    --background-start-rgb: 12, 0, 24;
+    --background-end-rgb: 0, 20, 36;
+  }
 }
 
 * {
@@ -29,7 +33,7 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      50deg,
+      230deg,
       transparent,
       rgb(var(--background-end-rgb))
     )
