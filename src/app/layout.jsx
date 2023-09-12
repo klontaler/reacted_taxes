@@ -12,11 +12,17 @@ const jetbrains_mono = JetBrains_Mono({
 export const metadata = {
   title: 'Плотина...логи',
   description: 'Небольшой калькулятор налогов, теперь сделанный с помошью реакта',
+  viewport: {
+    width: 'device-width',
+    initialScale: '1',
+    maximumScale: '1',
+    userScalable: 'no',
+  },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ru">
+    <html lang="ru" >
       <body className={jetbrains_mono.className}>
           <Header />
           {children}
