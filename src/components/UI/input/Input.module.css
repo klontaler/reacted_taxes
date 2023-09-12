@@ -18,3 +18,9 @@
     color: rgb(180, 180, 180);
   }
 }
+
+@media (max-width: 1024px) {
+  .input {
+    width: 80%;
+  }
+}

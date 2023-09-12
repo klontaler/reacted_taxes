@@ -1,10 +1,22 @@
 .textWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.usual {
   max-width: 48%;
+}
+
+.inside {
+  width: 96%;
+  margin: 0 auto;
 }
 
 /* Mobile */
 @media (max-width: 700px) {
-  .textWrapper {
+  .usual {
     max-width: 94%;
   }  
 }

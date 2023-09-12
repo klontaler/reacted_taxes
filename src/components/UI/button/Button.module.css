@@ -10,6 +10,10 @@
   color: rgb(0, 0, 0);
 }
 
+.button:disabled {
+  color: rgb(120, 120, 120);
+}
+
 .nextButton {
   width: 80px;
   margin:  0 auto auto;
@@ -21,8 +25,13 @@
   right: 36px;
   top: 12px;
 }
+
 .marginButton {
   margin: 24px;
+}
+
+.marginBottom {
+  margin-bottom: 24px;
 }
 
 @media (prefers-color-scheme: dark) {

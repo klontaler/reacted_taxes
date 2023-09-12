@@ -5,8 +5,8 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-        <h1>Это вступительный текст</h1>
-        <h2 style={{margin: '12px 0 0'}}>для калькулятора налогов (сейчас только тех, что платятся с зарплаты)</h2>
+        <h1 style={{margin: '0 12px 0'}}>Это вступительный текст</h1>
+        <h2 style={{margin: '12px 12px 0'}}>для калькулятора налогов (сейчас только тех, что платятся с зарплаты)</h2>
 
         <div className={styles.buttonWrapper}>
           <Button option="margin">

@@ -7,6 +7,7 @@ import Button from '@/components/UI/button/Button';
 import Input from '@/components/UI/input/Input';
 import Block from '@/components/UI/block/Block';
 import YellowBlock from '@/components/UI/yellowBlock/YellowBlock';
+import TextWrapper from '@/components/UI/textWrapper/TextWrapper';
 
 export default function Calculator() {
   const [salary, setSalary] = useState();
@@ -51,8 +52,8 @@ export default function Calculator() {
             <h1 className={styles.h1}>Какая у вас заработная плата до вычета налогов?</h1>
           </YellowBlock>
           <h2 className={styles.h2}>Введите свою заработную плату, получаемую на руки:</h2>
-          <Input Inputmode="numeric" type="text" placeholder="В рублях" onChange={handleSalary} style={{margin: '16px auto 16px',}}/>
-          <Button option="next" onClick={() => setBlockNum(2)} disabled={salary/salary != 1 || salary <= 0}>Далее</Button>
+          <Input inputMode="numeric" type="text" placeholder="В рублях" onChange={handleSalary} style={{margin: '16px auto 16px',}}/>
+          <Button option="next" marginB="y" onClick={() => setBlockNum(2)} disabled={salary/salary != 1 || salary <= 0}>Далее</Button>
         </Block>
       </main>
     )
@@ -64,7 +65,7 @@ export default function Calculator() {
             <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет clarification block, но его пока нет...</h1></div>
           </YellowBlock>
           <h2 className={styles.h2} style={{marginBottom: '18px'}}>Скорее всего, я напишу его для того, чтобы уточнить по поводу налогов с покупок и тд</h2>
-          <Button option="next" onClick={() => [setBlockNum(3), calculate()]}>Далее</Button>
+          <Button option="next" marginB="y" onClick={() => [setBlockNum(3), calculate()]}>Далее</Button>
         </Block>
       </main>
     )
@@ -75,12 +76,14 @@ export default function Calculator() {
           <YellowBlock>
             <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет result block, но его пока тоже нет...</h1></div>
           </YellowBlock>
-          <h2 className={styles.marginH2}>Для чего он существует вполне ясно и понятно</h2>
-          <h2 className={styles.marginH2}>Всего работодатель тратит на вас: {expenses.whole}</h2>
-          <h2 className={styles.marginH2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>
-          <h2 className={styles.marginH2}>И взносы в различные фонды, в т.ч. и пенсионный: {expenses.funds}</h2>
-          <h2 className={styles.marginH2} id={styles.resultMarginFix}>Для чего он существует вполне ясно и понятно</h2>
-          <Button option='prev' onClick={() => [setBlockNum(1), setSalary('')]}>В начало</Button>
+          <TextWrapper inside="y">
+            <h2 className={styles.marginH2}>Для чего он существует вполне ясно и понятно</h2>
+            <h2 className={styles.marginH2}>Всего работодатель тратит на вас: {expenses.whole}</h2>
+            <h2 className={styles.marginH2}>Это включает в себя НДФЛ: {expenses.ndfl}</h2>
+            <h2 className={styles.marginH2}>И взносы в различные фонды, в т.ч. и пенсионный: {expenses.funds}</h2>
+            <h2 className={styles.marginH2} id={styles.resultMarginFix}>Для чего он существует вполне ясно и понятно</h2>
+            <Button option='prev' onClick={() => [setBlockNum(1), setSalary('')]}>В начало</Button>
+          </TextWrapper>
         </Block>
       </main>
     )
