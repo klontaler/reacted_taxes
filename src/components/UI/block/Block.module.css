@@ -27,12 +27,14 @@
   .block {
     width: 90%;
   }
+  .height400 {
+    height: auto;
+  }
 
   .resultBlock {
     margin-top: 40px;
     width: 90%;
   }
-
 }
 
 @media (min-width: 701px) and (max-width: 1280px) {

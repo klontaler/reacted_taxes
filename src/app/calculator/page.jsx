@@ -8,6 +8,7 @@ import Input from '@/components/UI/input/Input';
 import Block from '@/components/UI/block/Block';
 import YellowBlock from '@/components/UI/yellowBlock/YellowBlock';
 import TextWrapper from '@/components/UI/textWrapper/TextWrapper';
+import Wrapper from '@/components/UI/wrapper/Wrapper';
 
 export default function Calculator() {
   const [salary, setSalary] = useState();
@@ -51,9 +52,11 @@ export default function Calculator() {
           <YellowBlock>
             <h1 className={styles.h1}>Какая у вас заработная плата до вычета налогов?</h1>
           </YellowBlock>
-          <h2 className={styles.h2}>Введите свою заработную плату, получаемую на руки:</h2>
-          <Input inputMode="numeric" type="text" placeholder="В рублях" onChange={handleSalary} style={{margin: '16px auto 16px',}}/>
-          <Button option="next" marginB="y" onClick={() => setBlockNum(2)} disabled={salary/salary != 1 || salary <= 0}>Далее</Button>
+          <Wrapper>
+            <h2 className={styles.h2}>Введите свою заработную плату, получаемую на руки:</h2>
+            <Input inputMode="numeric" type="text" placeholder="В рублях" onChange={handleSalary} style={{margin: '16px auto 16px',}}/>
+            <Button option="next" onClick={() => setBlockNum(2)} disabled={salary/salary != 1 || salary <= 0}>Далее</Button>
+          </Wrapper>
         </Block>
       </main>
     )
@@ -65,7 +68,7 @@ export default function Calculator() {
             <div className={styles.yellowBlock}><h1 id={styles.h1} className={styles.h1}>Это будет clarification block, но его пока нет...</h1></div>
           </YellowBlock>
           <h2 className={styles.h2} style={{marginBottom: '18px'}}>Скорее всего, я напишу его для того, чтобы уточнить по поводу налогов с покупок и тд</h2>
-          <Button option="next" marginB="y" onClick={() => [setBlockNum(3), calculate()]}>Далее</Button>
+          <Button option="next" onClick={() => [setBlockNum(3), calculate()]}>Далее</Button>
         </Block>
       </main>
     )
