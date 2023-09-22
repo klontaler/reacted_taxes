@@ -62,7 +62,7 @@ export default function Info() {
           nextDisable={true}
         >
           <h2 className={styles.h2} style={{margin: '32px auto 32px',}}>Действительно ли такой уровень налогооблажения соответсвует затратам на различные сферы нашей жизни?</h2>
-          <span className={styles.NO} style={{marginBottom: '32px',}}>Нет.</span>
+//          <span className={styles.NO} style={{marginBottom: '32px',}}>Нет.</span>
         </TextCard>
       </main>
     )
